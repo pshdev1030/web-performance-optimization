@@ -233,6 +233,13 @@ performance.timing 이벤트 속성은 다음과 같이 정의되어 있다.
 | onLoad            | loadEventStart        | 웹페이지의 load 이벤트가 발생하는 시점이다.                                                                                                                                                                                                                         |
 | onLoad            | loadEventEnd          | 웹페이지의 load 이벤트가 완료된 시점이다.                                                                                                                                                                                                                           |
 
+근데 이 timing은 찾아보니 deprecated 됐다.
+지금은 performance.getEntries()로 목록을 불러와서 사용한다.
+
+```js
+performance.getEntries();
+```
+
 ### 2.5.4 네비게이션 타이밍 속성값 구하기
 
 window.performance.navigation 객체는 페이지 재전송 속성 그리고 앞뒤 이동버튼이나 URL이 어떤 페이지 로딩을 발생시키는지 확인하는 속성을 저장한다.
